@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salida de Mercadería</title>
+    <link rel="icon" type="image/png" href="imagenes_admin/favicon.png">
     <style>
         .logo {
             position: absolute;
@@ -13,22 +14,22 @@
             height: auto;
         }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #17a24f;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #17a24f 0%, #17324f 100%);
             color: white;
             margin: 0;
             padding: 0;
-            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            height: 100vh;
         }
         .container {
-            width: 300px;
+            width: 350px;
             padding: 40px;
             border-radius: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.85);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             box-sizing: border-box;
             text-align: center;
         }
@@ -37,13 +38,12 @@
             font-size: 28px;
         }
         .field label {
-            float: left;
-            clear: both;
+            display: block;
             font-size: 18px;
             margin-top: 10px;
         }
         input, select {
-            width: calc(100% - 20px);
+            width: 100%;
             padding: 10px;
             margin-top: 8px;
             margin-bottom: 20px;
@@ -53,7 +53,7 @@
             box-sizing: border-box;
             color: #000;
         }
-        .button {
+        .button, .home-button {
             width: 100%;
             background-color: #000000;
             color: white;
@@ -61,21 +61,16 @@
             border: none;
             border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            display: block;
             margin-top: 10px;
+            transition: background-color 0.3s, transform 0.3s;
         }
-        .button:hover {
+        .button:hover, .home-button:hover {
             background-color: #333;
+            transform: scale(1.05);
         }
-        /* Added for spacing between the buttons */
         .button-container {
             margin-top: 20px;
-        }
-        .home-button {
-            background-color: #000; /* Keeping it consistent with the other buttons */
-        }
-        .home-button:hover {
-            background-color: #333;
         }
     </style>
 </head>
@@ -114,11 +109,10 @@
             </div>
             <div class="button-container">
                 <button type="submit" class="button">Registrar Movimiento</button>
+                <button onclick="window.location.href='index.html';" class="button home-button">Volver al Home</button>
             </div>
         </form>
-        <img src="imagenes_admin/logo.png" alt="Logo" class="logo"> 
-        <!-- Botón para volver al Home -->
-        <button onclick="window.location.href='index.html';" class="button home-button">Volver al Home</button>
+        <img src="imagenes_admin/logo.png" alt="Logo" class="logo">
     </div>
 </body>
 </html>
