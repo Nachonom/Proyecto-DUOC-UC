@@ -1,42 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Carrito.css">
-  <title>Lista de Compras</title>
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="Carrito.css"> <!-- Asegúrate de que el path al CSS sea correcto -->
 </head>
 <body>
-  <div class="container">
-    <h1>Lista de Compras</h1>
-    <ul>
-      <li class="item">
-        <img src="Imag Index/Mendocino.jpg">
-        <span>Mendocino</span>
-        <button>Eliminar</button>
-      </li>
-      <li class="item">
-        <img src="Imag Index/Pepsi.jpg">
-        <span>Pepsi</span>
-        <button>Eliminar</button>
-      </li>
-    </ul>
-  </div>
-  <div class="Total">
-    <h2>Total: $2.600</h2>
-    <form id="payment-form">
-      <label>
-        <input type="radio" name="payment-method" value="cash">
-        Pago en efectivo
-      </label>
-      <label>
-        <input type="radio" name="payment-method" value="card">
-        Pago con tarjeta
-      </label>
-      <br><br>
-      <input type="button" value="Finalizar Compra" onclick="location.href='index.html';">
-    </form>
-  </div>
+  <div class="carrito-lateral carrito-page" id="carrito-lateral">
+    <div class="contenido-carrito">
+      <div class="detalles-carrito" id="detalles-carrito">
+        <!-- Aquí se mostrarán los detalles del carrito -->
+      </div>
+      <div class="total-precio">
+        Total: $<span id="precio-total">0</span>
+    </div>
+      <button id="pagado" class="boton-pagar">Pagar</button>
+    </div>
+</div>
 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="Carrito.js"></script>
 </body>
 </html>

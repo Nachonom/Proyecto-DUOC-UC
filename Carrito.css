@@ -18,44 +18,36 @@ body {
     text-align: center;
   }
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
+  .detalles-carrito div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
     padding: 10px;
-    margin-bottom: 5px;
     background-color: #f9f9f9;
     border-radius: 5px;
-  }
+}
 
-  li:last-child {
-    margin-bottom: 0;
-  }
+.detalles-carrito img {
+    width: 50px; /* O ajusta según la necesidad */
+    height: auto;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    border-radius: 5px; /* Opcional: para bordes redondeados */
+}
 
-  .item {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .item span {
-    font-weight: bold;
-    margin-top: 20px;
-  }
-
-  .item button {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
+.detalles-carrito button {
+    margin-left: 10px; /* Espacio entre botones y texto */
     padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-  }
+}
 
-  .item button:hover {
-    background-color: #45a049;
-  }
+/* Ajustes adicionales para botones si es necesario */
+.detalles-carrito button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 
   .Total button{
     background-color: #4caf50;
@@ -72,11 +64,6 @@ body {
     background-color: #cbcbcb;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  .item img{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
   }
 
   #payment-form input{

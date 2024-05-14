@@ -13,8 +13,8 @@
             height: auto;
         }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #17a24f;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #17a24f 0%, #17324f 100%);
             margin: 0;
             padding: 0;
             display: flex;
@@ -26,18 +26,20 @@
             width: 300px;
             padding: 40px;
             border-radius: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.85);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             color: white;
             box-sizing: border-box;
+            text-align: center;
         }
         h2 {
             margin-bottom: 20px;
             font-size: 28px;
         }
         label {
-            float: left;
+            display: block;
             font-size: 18px;
+            margin-top: 10px;
         }
         input[type="text"], input[type="password"] {
             width: calc(100% - 20px);
@@ -53,28 +55,28 @@
         input[type="button"] {
             width: 100%;
             background-color: #5d5858;
-            color: rgb(4, 2, 2);
+            color: white;
             padding: 10px;
             margin: 10px 0;
             border: none;
             border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out,
-            background-color 0.2s ease-in-out;
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
         }
         input[type="button"]:hover {
-            transform: escale(1.1);
+            transform: scale(1.05);
             background-color: #17a24f;
         }
         a {
             text-decoration: none;
-            color:aliceblue 
+            color: aliceblue;
         }
         a:hover {
             color: #8af390;
         }
     </style>
 </head>
+<script src="login.js"></script>
 <body>
     <form>
         <h2>Iniciar sesión</h2>
@@ -83,7 +85,6 @@
         <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password" required>
         <input type="button" value="Ingresar" onclick="location.href='index.html';">
-        <input type="button" value="Registrarse" onclick="location.href='registro.html';">
         <img src="imagenes_admin/logo.png" alt="Logo" class="logo"> 
     </form>
 </body>

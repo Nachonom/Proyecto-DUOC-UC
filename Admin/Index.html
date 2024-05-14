@@ -6,16 +6,9 @@
     <title>Panel de Administración</title>
     <link rel="icon" type="image/png" href="imagenes_admin/favicon.png">
     <style>
-        .logo {
-            position: absolute;
-            top: 10px; 
-            left: 10px; 
-            width: 300px; 
-            height: auto;
-        }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #17a24f;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #17a24f 0%, #17324f 100%);
             margin: 0;
             padding: 0;
             display: flex;
@@ -27,8 +20,8 @@
             width: 350px;
             padding: 40px;
             border-radius: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.85);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             box-sizing: border-box;
             text-align: center;
         }
@@ -44,28 +37,34 @@
             margin-top: 20px;
         }
         .button, .view-changes-button {
-            background-color: #000000;
+            background-color: #000;
             color: white;
             border: none;
             border-radius: 10px;
             padding: 15px;
             cursor: pointer;
             text-decoration: none;
-            transition: background-color 0.3s;
+            transition: all 0.3s ease;  /* Transición suavizada */
             font-size: 18px;
         }
         .button:hover, .view-changes-button:hover {
-            background-color: #333;
+            background-color: #555;  /* Oscurecer al pasar el mouse */
+            transform: scale(1.05);  /* Ligeramente más grande */
         }
         a {
             color: white;
             text-decoration: none;
-            display: block;
         }
         a:hover {
-            color: #8af390;
+            color: #8af390;  /* Verde claro al pasar el mouse */
         }
-        
+        .logo {
+            position: absolute;
+            top: 10px; 
+            left: 10px; 
+            width: 300px; 
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -77,9 +76,9 @@
             <a href="Salida-Merc.html" class="button">Salida Mercadería</a>
             <button onclick="location.href='index.html';" class="button">Ver cambios</button>
             <button onclick="location.href='../index.html';" class="button">Salir</button>
-            <img src="imagenes_admin/logo.png" alt="Logo" class="logo"> 
-        <h1>Panel de Administración</h1>
+            <button onclick="location.href='configuracion.html';" class="button">Configuración</button>
         </div>
+        <img src="imagenes_admin/logo.png" alt="Logo" class="logo"> 
     </div>
 </body>
 </html>
